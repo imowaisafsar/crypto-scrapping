@@ -1,1 +1,1 @@
-console.log("Crypto Fetcher")
+console.log("Crypto Fetcher Running.")
