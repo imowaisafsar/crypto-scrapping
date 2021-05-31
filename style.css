@@ -1,0 +1,65 @@
+:root{
+    --colorBlack: #000;
+    --colorWhite: #fff;
+    --colorWhiteGrey1: #f0f0f0;
+    --colorWhiteGrey2: #e7e7e7;
+    --greyDark1: #363636;
+    --greyLight1: #ececec;
+    --primary: #18a5d2;
+    --boxShadowColor1: #c9c9c9;
+}
+
+* {
+    font-family: 'Fira Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+main {
+    width: 350px;
+    height: auto;
+    overflow: hidden;
+}
+
+.modal-header {
+    width: calc(100% - 20px);
+    display: flex;
+    padding: 10px;
+    /* background-color: var(--lightGrey1); */
+    background-color: var(--greyDark1);
+    box-shadow: 0 0 6px 2px var(--boxShadowColor1);
+}
+
+.modal-header .logo {
+    /* flex: 1; */
+    margin-right: 15px;
+}
+
+.modal-header .logo img {
+    width: 40px;
+    height: 40px;
+}
+
+.modal-header .title {
+    flex: 1;
+}
+
+.modal-header .title h1 {
+    color: var(--colorWhiteGrey1);
+}
+
+.modal-header .title span.version {
+    color: var(--primary);
+    font-weight: bold;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+.modal-footer {}
+
+.modal-footer p {
+    text-align: center;
+    font-size: 13px;
+    font-weight: bold;
+    color: var(--greyDark1);
+    padding: 4px 10px;
+}
