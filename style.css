@@ -7,6 +7,10 @@
     --greyLight1: #ececec;
     --primary: #18a5d2;
     --boxShadowColor1: #c9c9c9;
+    --tabRed: red;
+    --tabGreen: green;
+    --colorGold: #c69320;
+    --tableBorderBottom: #f1f1f1;
 }
 
 * {
@@ -15,7 +19,8 @@
     padding: 0;
 }
 main {
-    width: 350px;
+    width: 550px;
+    /* width: 100%; */
     height: auto;
     overflow: hidden;
 }
@@ -24,9 +29,24 @@ main {
     width: calc(100% - 20px);
     display: flex;
     padding: 10px;
+    position: relative;
     /* background-color: var(--lightGrey1); */
     background-color: var(--greyDark1);
     box-shadow: 0 0 6px 2px var(--boxShadowColor1);
+}
+
+.modal-header .fixed_refresh_botton {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    color: var(--colorWhite);
+    transform: translate(0, -50%);
+    font-size: 35px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.modal-header .fixed_refresh_botton:hover {
+    background-color: #b6b6b640;
 }
 
 .modal-header .logo {
@@ -59,7 +79,143 @@ main {
 .modal-footer p {
     text-align: center;
     font-size: 13px;
-    font-weight: bold;
+    font-weight: 400;
     color: var(--greyDark1);
     padding: 4px 10px;
+    background-color: #fff;
+    box-shadow: 0 0 8px 0px var(--boxShadowColor1);
+}
+
+/*  */
+
+img.c_image {
+    width: 22px;
+    height: 22px;
+    float: left;
+}
+
+span.c_name {
+    font-weight: bold;
+    margin-left: 5px;
+    font-size: 18px;
+}
+
+div.low_high_24 > span,
+div.price_change_24h > span {
+    float: left;
+}
+
+div.low_high_24 > span.material-icons {
+    font-size: 22px;
+}
+
+span.high_24 {
+    font-size: 12px;
+    line-height: 2;
+}
+
+span.low_24 {
+    font-size: 12px;
+    line-height: 2;
+}
+
+label.current_price {
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 0;
+}
+
+.current_price span.symbol {
+    font-size: 11px;
+    font-weight: bold;
+    color: var(--primary);
+}
+
+.price_change_24h span.material-icons {
+    font-size: 15px;
+    color: var(--colorGold);
+}
+
+.price_change_24h span.price_change {
+    font-size: 14px;
+    margin-right: 10px;
+    color: var(--greyDark1);
+}
+
+.price_change_24h span.change_percentage {
+    font-size: 14px;
+    color: var(--greyDark1);
+}
+.price_change_24h span.icons {
+    font-size: 14px;
+}
+
+label.total_supply {
+    font-size: 18px;
+    font-weight: 400;
+    /* line-height: 1; */
+}
+label.total_supply span.material-icons {
+    font-size: 17px;
+}
+
+div.supply_bottom_bar span.material-icons {
+    font-size: 14px;
+    color: var(--primary);
+}
+div.supply_bottom_bar span.max_supply,
+div.supply_bottom_bar span.circulating_supply {
+    font-size: 10px;
+    margin-right: 10px;
+}
+
+table#crypto_fetcher_extension_data_table {
+    width: 100%;
+}
+table#crypto_fetcher_extension_data_table thead td {
+    padding: 5px 10px;
+    font-size: 10px;
+    font-weight: bold;
+    border-bottom: 3px solid var(--boxShadowColor1);
+}
+/* table#crypto_fetcher_extension_data_table tbody td:last-child {
+    border-right: none;
+} */
+table#crypto_fetcher_extension_data_table tbody td {
+    /* border-right: 1px solid #ccc; */
+    border-bottom: 1px solid var(--tableBorderBottom);
+    padding: 2px 5px;
+}
+table#crypto_fetcher_extension_data_table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+span.material-icons.arrow_drop_down {
+    color: var(--tabRed);
+}
+span.material-icons.arrow_drop_up {
+    color: var(--tabGreen);
+}
+
+
+.modal-body.bScroll {
+    max-height: 400px;
+    overflow-y: auto;
+}
+.bScroll::-webkit-scrollbar {
+    width: 8px;
+}
+
+.bScroll::-webkit-scrollbar-thumb {
+    background: var(--boxShadowColor1);
+    /* background: #dadce0; */
+    background-clip: padding-box;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    box-shadow: none;
+    min-height: 100px;
+}
+.bScroll::-webkit-scrollbar-track {
+    background: none;
+    border: none;
 }

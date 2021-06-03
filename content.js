@@ -1,1 +1,6 @@
-console.log("Crypto Fetcher Running.")
+console.log("Content Script Running.")
+
+
+
+
+
