@@ -18,8 +18,8 @@
     margin: 0;
     padding: 0;
 }
-main {
-    width: 550px;
+main#crypto_fetcher_extension_main {
+    width: 300px;
     /* width: 100%; */
     height: auto;
     overflow: hidden;
@@ -218,4 +218,27 @@ span.material-icons.arrow_drop_up {
 .bScroll::-webkit-scrollbar-track {
     background: none;
     border: none;
+}
+
+input.crypt-buy-sell-extension-only-number {
+    width: calc(100% - 60px);
+    height: 30px;
+    background-color: #ccc;
+    border: none;
+    border-radius: 8px;
+    padding: 3px 10px;
+    margin: 5px 20px;
+    outline: none;
+}
+button.crypt-buy-sell-extension-button {
+    width: calc(100% - 40px);
+    height: 30px;
+    background-color:#f8d12f;
+    border: none;
+    border-radius: 8px;
+    padding: 3px 10px;
+    margin: 5px 20px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
 }

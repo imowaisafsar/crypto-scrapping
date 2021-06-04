@@ -14,6 +14,7 @@
     "permissions": [
         "storage",
         "webNavigation",
+        "activeTab",
         "tabs",
         "identity",
         "webRequest",
@@ -25,15 +26,12 @@
     "content_scripts": [
         {
             "matches": [
-                "<all_urls>"
-            ],
-            "css": [
-                "style.css"
+                "https://p2p.binance.com/en/trade/buy/*"
             ],
             "js": [
                 "content.js"
             ],
-            "all_frames": true
+            "run_at": "document_end"
         }
     ]
 }
